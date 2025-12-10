@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – Boom & Scissor Lift Rentals Near You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Contact us for boom lift, scissor lift and man lift rentals near your location. Quick quotes, delivery support and machine availability."
+  />
+
+  <!-- GOTHAM FONT -->
+  <style>
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Regular.woff2") format("woff2"),
+           url("fonts/Gotham-Regular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Medium.woff2") format("woff2"),
+           url("fonts/Gotham-Medium.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Bold.woff2") format("woff2"),
+           url("fonts/Gotham-Bold.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    :root {
+      --dark-red: #44000D;
+      --wine: #83142C;
+      --gold: #F9D276;
+      --peach: #FFD39A;
+      --black: #000000;
+      --white: #FFFFFF;
+      --light-bg: #F8F4F3;
+
+      --sandal-light: #FCE7C8;
+      --sandal-strong: #FFE6B0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Gotham", sans-serif;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: var(--black);
+    }
+
+    main {
+      padding-top: 80px; /* space for fixed navbar */
+    }
+
+    section {
+      padding: 70px 20px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .tagline {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 8px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 3px;
+      background: var(--gold);
+      color: var(--black);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      /* only colour change on hover */
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--peach);
+      color: var(--black);
+    }
+
+    .section-cta {
+      margin-top: 20px;
+    }
+
+    /* ========== HERO / CONTACT OVERVIEW (RED BACKGROUND) ========== */
+    .contact-hero {
+      background: radial-gradient(circle at top left, var(--dark-red), var(--wine));
+      color: var(--white);
+    }
+
+    .contact-hero .tagline {
+      color: var(--sandal-strong);
+    }
+
+    .contact-hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 32px;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .contact-hero-main {
+      max-width: 620px;
+    }
+
+    .contact-title {
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .contact-text {
+      font-size: 14px;
+      color: var(--sandal-light);
+      margin-bottom: 14px;
+    }
+
+    .contact-note {
+      font-size: 12px;
+      color: var(--sandal-strong);
+      max-width: 520px;
+    }
+
+    .contact-strip {
+      margin-top: 16px;
+      padding: 10px 12px;
+      border-radius: 4px;
+      background: rgba(255, 211, 154, 0.08);
+      border: 1px solid rgba(249, 210, 118, 0.4);
+      font-size: 12px;
+      color: var(--sandal-strong);
+    }
+
+    .contact-hero-cta {
+      margin-top: 18px;
+    }
+
+    .contact-hero-side {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid rgba(255, 211, 154, 0.4);
+    }
+
+    .contact-side-heading {
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: var(--sandal-strong);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-side-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 12px;
+      color: var(--sandal-light);
+      margin-bottom: 10px;
+    }
+
+    .contact-side-list li {
+      margin-bottom: 4px;
+    }
+
+    .contact-side-list li::before {
+      content: "• ";
+      color: var(--gold);
+    }
+
+    .contact-side-block {
+      font-size: 12px;
+      color: var(--sandal-light);
+      margin-top: 8px;
+    }
+
+    .contact-side-block strong {
+      display: inline-block;
+      min-width: 90px;
+    }
+
+    .contact-side-link {
+      color: var(--sandal-strong);
+      text-decoration: none;
+    }
+
+    .contact-side-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== LOCATIONS & WORK TYPES SECTION ========== */
+    .locations {
+      background: var(--white);
+    }
+
+    .locations-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .locations-header {
+      max-width: 640px;
+    }
+
+    .locations-header h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: var(--dark-red);
+    }
+
+    .locations-header p {
+      font-size: 14px;
+      color: #555555;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 20px;
+    }
+
+    .location-card {
+      background: #F7F2F1;
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid #E3D7D3;
+    }
+
+    .location-card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: var(--dark-red);
+    }
+
+    .location-text {
+      font-size: 13px;
+      color: #555555;
+      margin-bottom: 10px;
+    }
+
+    .location-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 12px;
+      color: #555555;
+    }
+
+    .location-list li {
+      margin-bottom: 4px;
+    }
+
+    .location-list li::before {
+      content: "• ";
+      color: var(--dark-red);
+    }
+
+    /* ========== ENQUIRY SECTION (VISIBLE FORM) ========== */
+    .enquiry-wrapper {
+      background: var(--white);
+    }
+
+    .enquiry-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      width: 100%;
+    }
+
+    .enquiry-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .enquiry-header h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: var(--dark-red);
+    }
+
+    .enquiry-header p {
+      font-size: 14px;
+      color: #555555;
+    }
+
+    /* ========== POPUP ENQUIRY MODAL ========== */
+    .enquiry-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    .enquiry-modal.open {
+      display: flex;
+    }
+
+    .enquiry-modal-inner {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 8px;
+      background: var(--light-bg);
+    }
+
+    .enquiry-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 22px;
+      background: transparent;
+      border: none;
+      color: var(--black);
+      cursor: pointer;
+    }
+
+    /* ========== SIMPLE REVEAL ANIMATION ========== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px) {
+      section {
+        padding: 60px 16px;
+      }
+
+      .contact-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .locations-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <main>
+    <!-- CONTACT HERO / OVERVIEW -->
+    <section class="contact-hero reveal">
+      <div class="container contact-hero-inner">
+        <div class="contact-hero-main">
+          <div class="tagline">Contact · Rentals near your location</div>
+          <h1 class="contact-title">
+            Contact us to plan your
+            <br>
+            boom, scissor &amp; man lift rentals near you
+          </h1>
+          <p class="contact-text">
+            Reach out when you are planning work at height and want to use the right access
+            equipment instead of temporary arrangements. We help match a lift to your
+            working height, access path and schedule.
+          </p>
+
+          <div class="contact-hero-cta">
+            <a href="#"
+               class="btn-primary js-open-enquiry">
+              Click here to send a quick rental enquiry near you
+            </a>
+          </div> <br><br>
+
+          <p class="contact-note">
+            If you have basic details like approximate height, photos or a brief scope of work,
+            include them when you send your enquiry. This helps us respond with more accurate
+            options from the start.
+          </p>
+
+          <div class="contact-strip">
+            Support available during working hours · Guidance on choosing the right lift ·
+            Help with delivery and pickup planning
+          </div>
+        </div>
+
+        <aside class="contact-hero-side">
+          <div class="contact-side-heading">Contact details</div>
+          <div class="contact-side-block">
+            <strong>Call:</strong>
+            <a href="tel:+917200046850" class="contact-side-link">+91 72000 46850</a>
+          </div>
+          <div class="contact-side-block">
+            <strong>Email:</strong>
+            <a href="mailto:info@boomliftrentalanearme.com" class="contact-side-link">
+              info@boomliftrentalanearme.com
+            </a>
+          </div>
+          <div class="contact-side-block" style="margin-top:10px;">
+            <strong>Hours:</strong> Mon – Sat, 9:00 AM to 7:00 PM
+          </div>
+
+          <div class="contact-side-heading" style="margin-top:16px;">What to share when you contact us</div>
+          <ul class="contact-side-list">
+            <li>Location of the site and type of facility (warehouse, factory, mall, etc.).</li>
+            <li>Approximate working height and nature of work at height.</li>
+            <li>Whether the work is mostly indoor, semi-covered or outdoor.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- LOCATIONS & WORK TYPES -->
+    <section class="locations reveal">
+      <div class="container locations-inner">
+        <div class="locations-header">
+          <div class="tagline" style="color: var(--wine);">Service coverage</div>
+          <h2>Where we typically support lift rentals near you</h2>
+          <p>
+            We supply boom lifts, scissor lifts and man lifts to a range of sites – from
+            industrial units and warehouses to commercial buildings and event locations.
+          </p>
+        </div>
+
+        <div class="locations-grid">
+          <div class="location-card">
+            <h3>Common types of facilities</h3>
+            <p class="location-text">
+              These are typical spaces where teams regularly use access platforms instead
+              of ladders or temporary structures.
+            </p>
+            <ul class="location-list">
+              <li>Factories and production blocks</li>
+              <li>Warehouses and distribution centres</li>
+              <li>Commercial and office buildings</li>
+              <li>Shopping centres and showrooms</li>
+              <li>Data centres and technical facilities</li>
+              <li>Event venues and exhibition areas</li>
+            </ul>
+          </div>
+
+          <div class="location-card">
+            <h3>Typical work at height</h3>
+            <p class="location-text">
+              The same machines can support different jobs across industries. Here are
+              common use cases when you contact us for rentals.
+            </p>
+            <ul class="location-list">
+              <li>Façade and signage work near roads or open spaces</li>
+              <li>Racking, lighting and services inside warehouses</li>
+              <li>Electrical, HVAC and piping installations at height</li>
+              <li>Cleaning, inspections and periodic maintenance</li>
+              <li>Branding, décor and event-related activities</li>
+            </ul>
+            <div class="section-cta">
+              <a href="#"
+                 class="btn-primary js-open-enquiry">
+                Click here to describe the work you need to do at height
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY SECTION WITH VISIBLE FORM -->
+    <section id="enquiry-section" class="enquiry-wrapper reveal">
+      <div class="container enquiry-inner">
+        <div class="enquiry-header">
+          <div class="tagline" style="color: var(--wine);">Enquiry</div>
+          <h2>Send us your boom or scissor lift requirement near you</h2>
+          <p>
+            Use the form below to share your working height, tentative dates and site details.
+            We will respond with suitable lift options and a clear rental quote.
+          </p>
+        </div>
+
+        <!-- INLINE FORM FRAGMENT -->
+        <div id="page-enquiry-form"></div>
+
+        <div class="section-cta" style="text-align:center; margin-top: 24px;">
+          <a href="#"
+             class="btn-primary js-open-enquiry">
+            Click here to open the contact enquiry form in a popup
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <!-- POPUP ENQUIRY FORM -->
+  <div class="enquiry-modal" id="enquiry-modal">
+    <div class="enquiry-modal-inner">
+      <button class="enquiry-modal-close js-close-enquiry" aria-label="Close enquiry form">✖</button>
+      <div id="popup-enquiry-form"></div>
+    </div>
+  </div>
+
+  <script>
+    // Fragment loader (navbar, footer, forms)
+    function loadFragment(targetId, url) {
+      var container = document.getElementById(targetId);
+      if (!container) return;
+
+      fetch(url)
+        .then(function (response) {
+          return response.text();
+        })
+        .then(function (html) {
+          container.innerHTML = html;
+        })
+        .catch(function (error) {
+          console.error("Error loading fragment:", url, error);
+        });
+    }
+
+    // Load fragments
+    loadFragment("navbar", "navbar.html");
+    loadFragment("footer", "footer.html");
+    loadFragment("page-enquiry-form", "form.html");
+    loadFragment("popup-enquiry-form", "form.html");
+
+    // toggleMenu used inside navbar.html
+    function toggleMenu() {
+      var nav = document.getElementById("navLinks");
+      if (!nav) return;
+      nav.classList.toggle("open");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // REVEAL ON SCROLL
+      var revealEls = Array.prototype.slice.call(
+        document.querySelectorAll(".reveal")
+      );
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        revealEls.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        revealEls.forEach(function (el) {
+          el.classList.add("reveal-visible");
+        });
+      }
+
+      // POPUP ENQUIRY LOGIC
+      var modal = document.getElementById("enquiry-modal");
+
+      function openEnquiryModal(e) {
+        if (e) e.preventDefault();
+        if (modal) {
+          modal.classList.add("open");
+        }
+      }
+
+      function closeEnquiryModal() {
+        if (modal) {
+          modal.classList.remove("open");
+        }
+      }
+
+      function bindEnquiryButtons() {
+        var ctaButtons = document.querySelectorAll(".js-open-enquiry");
+        ctaButtons.forEach(function (btn) {
+          btn.addEventListener("click", openEnquiryModal);
+        });
+      }
+
+      bindEnquiryButtons();
+
+      var closeButtons = document.querySelectorAll(".js-close-enquiry");
+      closeButtons.forEach(function (btn) {
+        btn.addEventListener("click", closeEnquiryModal);
+      });
+
+      if (modal) {
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            closeEnquiryModal();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

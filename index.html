@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Boom Lift Rentals Near Me | Access Equipment Hire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Rent boom lifts, scissor lifts and man lifts near your location. Safe access equipment, flexible rental durations and project-focused support."
+  />
+
+  <!-- GOTHAM FONT -->
+  <style>
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Regular.woff2") format("woff2"),
+           url("fonts/Gotham-Regular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Medium.woff2") format("woff2"),
+           url("fonts/Gotham-Medium.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Bold.woff2") format("woff2"),
+           url("fonts/Gotham-Bold.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    :root {
+      --dark-red: #44000D;
+      --wine: #83142C;
+      --gold: #F9D276;
+      --peach: #FFD39A;
+      --black: #000000;
+      --white: #FFFFFF;
+      --light-bg: #F8F4F3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Gotham", sans-serif;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: var(--black);
+    }
+
+    main {
+      padding-top: 26px; /* space for fixed navbar */
+    }
+
+    section {
+      padding: 70px 20px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .tagline {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 8px;
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+      max-width: 640px;
+    }
+
+    .section-header h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .section-header p {
+      color: #555555;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 3px;
+      background: var(--gold);
+      color: var(--black);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      border: none;
+      /* only colour change on hover – no other effects */
+      transition: background 0.25s ease, color 0.25s ease;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      background: var(--peach);
+      color: var(--black);
+    }
+
+    .section-cta {
+      margin-top: 20px;
+    }
+
+    /* ================= HERO (NEW LAYOUT) ================= */
+    .hero {
+      background: linear-gradient(160deg, var(--dark-red), var(--wine));
+      color: var(--white);
+    }
+
+    .hero .tagline {
+      color: var(--peach);
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .hero-top-row {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .hero-main {
+      flex: 1 1 120px;
+    }
+
+    .hero-title {
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      color: var(--white);
+    }
+
+    .hero-text {
+      font-size: 14px;
+      margin-bottom: 14px;
+      max-width: 520px;
+      color: #FCE7C8; /* sandal tone on red */
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: #FFE7B3; /* sandal / light */
+      max-width: 520px;
+    }
+
+    .hero-highlight-strip {
+      margin-top: 18px;
+      padding: 10px 12px;
+      border-radius: 4px;
+      background: rgba(255, 211, 154, 0.12);
+      border: 1px solid rgba(249, 210, 118, 0.35);
+      color: #FFE6B0;
+      font-size: 12px;
+    }
+
+    .hero-side-card {
+      flex: 0 0 360px;
+      max-width: 380px;
+      background: rgba(0,0,0,0.25);
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid rgba(255, 211, 154, 0.3);
+    }
+
+    .hero-image-wrap {
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      background: #333;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-side-title {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #FFE6B0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-side-list {
+      font-size: 12px;
+      color: #FCE7C8;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .hero-side-list li {
+      margin-bottom: 4px;
+    }
+
+    .hero-side-list li::before {
+      content: "• ";
+      color: var(--gold);
+    }
+
+    .hero-bottom-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .hero-pill {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 211, 154, 0.6);
+      color: #FFE3AA;
+    }
+
+    .hero-cta {
+      margin-top: 18px;
+    }
+
+    /* ================= OVERVIEW (NEW LAYOUT) ================= */
+    .overview {
+      background: var(--white);
+    }
+
+    .overview-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    .overview-upper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .overview-text {
+      flex: 1 1 260px;
+    }
+
+    .overview-text p {
+      color: #555555;
+      margin-bottom: 10px;
+    }
+
+    .overview-points {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .overview-point {
+      padding: 10px 12px;
+      border-radius: 6px;
+      background: #F7EEEC;
+      border-left: 4px solid var(--gold);
+      font-size: 13px;
+      color: #444444;
+    }
+
+    .overview-point strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--dark-red);
+    }
+
+    .overview-strip {
+      flex: 0 0 260px;
+      max-width: 320px;
+      border-radius: 8px;
+      padding: 14px;
+      background: #FFF7E8;
+      border: 1px solid #E9D5C6;
+      font-size: 13px;
+      color: #5A4942;
+    }
+
+    .overview-strip-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark-red);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .overview-lower {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .overview-lower-text {
+      font-size: 13px;
+      color: #555555;
+      max-width: 520px;
+    }
+
+    /* ================= EQUIPMENT BANDS (NEW STRUCTURE) ================= */
+    .equipment-bands {
+      background: #FFF7E8;
+    }
+
+    .equipment-bands-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    .equipment-band-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .equipment-band-row:nth-child(odd) .equipment-image-col {
+      order: 2;
+    }
+
+    .equipment-band-row:nth-child(odd) .equipment-text-col {
+      order: 1;
+    }
+
+    .equipment-text-col,
+    .equipment-image-col {
+      flex: 1 1 260px;
+    }
+
+    .equipment-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--wine);
+      margin-bottom: 4px;
+    }
+
+    .equipment-text-col h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: var(--dark-red);
+    }
+
+    .equipment-text-col p {
+      font-size: 13px;
+      color: #574842;
+      margin-bottom: 10px;
+    }
+
+    .equipment-image-box {
+      border-radius: 8px;
+      overflow: hidden;
+      background: #DDD;
+    }
+
+    .equipment-image-box img {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ================= WORK / INDUSTRIES ================= */
+    .work {
+      background: var(--white);
+    }
+
+    .work-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .work-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .work-card {
+      background: #F7F2F1;
+      border-radius: 8px;
+      padding: 14px;
+      border: 1px solid #E1D3D0;
+    }
+
+    .work-card h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: var(--dark-red);
+    }
+
+    .work-card p {
+      font-size: 13px;
+      color: #555555;
+    }
+
+    /* ================= GALLERY (SIMPLE HORIZONTAL) ================= */
+    .gallery {
+      background: #FFFDF9;
+    }
+
+    .gallery-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .gallery-track-wrapper {
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+
+    .gallery-track {
+      display: flex;
+      gap: 14px;
+      min-width: 100%;
+    }
+
+    .gallery-item {
+      min-width: 230px;
+      max-width: 260px;
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid #E3D7D3;
+      overflow: hidden;
+    }
+
+    .gallery-image-wrap {
+      height: 450px;
+      background: #DDD;
+      overflow: hidden;
+    }
+
+    .gallery-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-body {
+      padding: 10px 12px 12px;
+    }
+
+    .gallery-body p {
+      font-size: 12px;
+      color: #555555;
+    }
+
+    .gallery-note {
+      font-size: 11px;
+      color: #777777;
+    }
+
+    /* ================= ENQUIRY / BOTTOM FORM ================= */
+    .enquiry-wrapper {
+      background: var(--white);
+    }
+
+    .enquiry-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .enquiry-top {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .enquiry-top h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .enquiry-top p {
+      font-size: 14px;
+      color: #555555;
+    }
+
+    /* ================= POPUP ENQUIRY MODAL ================= */
+    .enquiry-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    .enquiry-modal.open {
+      display: flex;
+    }
+
+    .enquiry-modal-inner {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 8px;
+      background: var(--light-bg);
+    }
+
+    .enquiry-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 22px;
+      background: transparent;
+      border: none;
+      color: var(--black);
+      cursor: pointer;
+    }
+
+    /* ================= SIMPLE REVEAL ANIMATION ================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      section {
+        padding: 60px 16px;
+      }
+
+      .hero-top-row {
+        flex-direction: column;
+      }
+
+      .equipment-band-row {
+        flex-direction: column;
+      }
+
+      .work-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .work-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR FRAGMENT -->
+  <div id="navbar"></div>
+
+  <main>
+    <!-- HERO SECTION (red background, sandal/white text) -->
+    <section class="hero reveal">
+      <div class="container hero-inner">
+        <div class="hero-top-row">
+          <div class="hero-main">
+            <div class="tagline">Access equipment rentals · near your location</div>
+            <h1 class="hero-title">
+              Boom lift &amp; scissor lift rentals
+              <br>
+              close to where you are working
+            </h1>
+            <p class="hero-text">
+              Rent boom lifts, scissor lifts and man lifts near your site instead of
+              depending on distant suppliers. We help you reach safe working height
+              with machines that match your project conditions.
+            </p>
+
+            <div class="section-cta hero-cta">
+              <a href="#"
+                 class="btn-primary js-open-enquiry">
+                Click here to plan your lift rental near you
+              </a>
+            </div> <br><br>
+
+            <p class="hero-note">
+              Share your approximate height, type of work and location; our team checks
+              nearby availability and suggests suitable equipment.
+            </p>
+
+            <!-- <div class="hero-highlight-strip">
+              Fast response on working days · Flexible daily, weekly and monthly rentals ·
+              Support available during your job
+            </div> -->
+          </div>
+
+          <aside class="hero-side-card">
+            <div class="hero-image-wrap">
+              <!-- hero image placeholder -->
+              <img src="./images/b1.png"
+                   alt="Access equipment in use near a commercial building">
+            </div>
+            <div class="hero-side-title">Typical details we ask in the enquiry</div>
+            <ul class="hero-side-list">
+              <li>Working height and approximate duration of the job</li>
+              <li>Indoor or outdoor usage and ground condition</li>
+              <li>Any access limitations like gates, ramps or tight turns</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="hero-bottom-row">
+          <span class="hero-pill">Boom lifts · Scissor lifts · Man lifts</span>
+          <span class="hero-pill">Short tasks to multi-week projects</span>
+          <span class="hero-pill">Support team throughout your rental</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW SECTION -->
+    <section class="overview reveal">
+      <div class="container overview-inner">
+        <div class="overview-upper">
+          <div class="overview-text">
+            <div class="section-header">
+              <div class="tagline" style="color: var(--wine);">Overview</div>
+              <h2>What you get when you rent lifts near you</h2>
+              <p>
+                Our focus is to make your work at height more predictable. Instead of
+                managing scaffolding or unsafe makeshift arrangements, you get access
+                equipment designed for safe operation.
+              </p>
+            </div>
+
+            <div class="overview-points">
+              <div class="overview-point">
+                <strong>Local support for your area</strong>
+                We align delivery, pickup and basic checks with your work timings so you
+                spend more time using the machine and less time chasing logistics.
+              </div>
+              <div class="overview-point">
+                <strong>Equipment matched to your site</strong>
+                Based on height, outreach and movement available, we help you select
+                between boom lifts, scissor lifts and compact man lifts.
+              </div>
+            </div>
+          </div>
+
+          <aside class="overview-strip">
+            <div class="overview-strip-title">
+              Need help choosing a lift?
+            </div>
+            <p>
+              If you are unsure about which type of equipment fits your job, we can
+              guide you using photos, videos or simple sketches of your site layout.
+            </p>
+            <div class="section-cta" style="margin-top: 10px;">
+              <a href="#"
+                 class="btn-primary js-open-enquiry">
+                Click here to describe your site and get guidance
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="overview-lower">
+          <p class="overview-lower-text">
+            Many customers start with one small job and then extend the rental once
+            they see how access platforms simplify their work. We are comfortable
+            handling both short and extended durations, as long as safety and clear
+            communication are maintained.
+          </p>
+
+          <div class="section-cta">
+            <a href="#"
+               class="btn-primary js-open-enquiry">
+              Click here to share your expected rental duration
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPMENT BANDS SECTION -->
+    <section class="equipment-bands reveal">
+      <div class="container equipment-bands-inner">
+        <div class="section-header">
+          <div class="tagline" style="color: var(--wine);">Equipment</div>
+          <h2>Different access options for different kinds of sites</h2>
+          <p>
+            Boom lifts, scissor lifts and man lifts each solve slightly different
+            challenges. These quick bands give you a feel of where each type fits.
+          </p>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="equipment-band-row">
+          <div class="equipment-text-col">
+            <div class="equipment-label">Outreach &amp; movement</div>
+            <h3>Boom lifts for complex access points</h3>
+            <p>
+              When your work area is not directly below the machine, boom lifts help
+              you move outwards and over obstacles. They are useful for signage,
+              façade panels, lighting poles and plant structures.
+            </p>
+            <p>
+              Safe baskets, powered movement and rotation make it easier for your
+              team to reach different points without constantly rearranging equipment.
+            </p>
+            <div class="section-cta">
+              <a href="#"
+                 class="btn-primary js-open-enquiry">
+                Click here to check boom lift options near you
+              </a>
+            </div>
+          </div>
+          <div class="equipment-image-col">
+            <div class="equipment-image-box">
+              <img src="./images/b2.png"
+                   alt="Boom lift reaching over obstacles near a building">
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="equipment-band-row">
+          <div class="equipment-text-col">
+            <div class="equipment-label">Stable vertical access</div>
+            <h3>Scissor lifts for straight-up work</h3>
+            <p>
+              If your job is mainly vertical – such as working on ceilings, services or
+              racking – scissor lifts provide a broader platform and straightforward
+              up-and-down motion.
+            </p>
+            <p>
+              They are commonly used in warehouses, commercial interiors and plant
+              maintenance where floor condition allows smooth movement.
+            </p>
+            <div class="section-cta">
+              <a href="#"
+                 class="btn-primary js-open-enquiry">
+                Click here to see which scissor lifts suit your site
+              </a>
+            </div>
+          </div>
+          <div class="equipment-image-col">
+            <div class="equipment-image-box">
+              <img src="./images/s1.png"
+                   alt="Scissor lift platform working inside a large interior space">
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="equipment-band-row">
+          <div class="equipment-text-col">
+            <div class="equipment-label">Compact &amp; focused</div>
+            <h3>Man lifts and AWP units for tighter spaces</h3>
+            <p>
+              Some jobs happen in narrow corridors, between machinery or in smaller
+              rooms. Compact man lifts or aerial work platforms are designed for
+              these tighter spots.
+            </p>
+            <p>
+              They help you complete focused maintenance without needing large
+              clearances or major rearrangement of existing equipment.
+            </p>
+            <div class="section-cta">
+              <a href="#"
+                 class="btn-primary js-open-enquiry">
+                Click here to ask about compact access for tight areas
+              </a>
+            </div>
+          </div>
+          <div class="equipment-image-col">
+            <div class="equipment-image-box">
+              <img src="./images/b3.png"
+                   alt="Compact man lift operating between machines">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / USE CASES SECTION -->
+    <section class="work reveal">
+      <div class="container work-inner">
+        <div class="section-header">
+          <div class="tagline" style="color: var(--wine);">Work we support</div>
+          <h2>Typical tasks that regularly use our access equipment</h2>
+          <p>
+            These are some of the common types of work where height access platforms
+            are chosen over ladders or temporary assemblies for better safety and speed.
+          </p>
+        </div>
+
+        <div class="work-list">
+          <article class="work-card">
+            <h3>Plant and factory maintenance</h3>
+            <p>
+              Access to ducts, pipe racks, structural members and equipment placed
+              at higher levels inside process areas and utilities.
+            </p>
+          </article>
+          <article class="work-card">
+            <h3>Warehouse &amp; storage upgrades</h3>
+            <p>
+              Working on racking systems, lighting, sprinklers and roof sheets
+              inside distribution centers and storage facilities.
+            </p>
+          </article>
+          <article class="work-card">
+            <h3>Commercial interior fit-outs</h3>
+            <p>
+              Signage, ceiling services, and façade elements inside showrooms,
+              offices and experience centers.
+            </p>
+          </article>
+          <article class="work-card">
+            <h3>Outdoor branding &amp; signage</h3>
+            <p>
+              Boards, banners and brand installations on building exteriors and
+              along busy corridors where reach and outreach matter.
+            </p>
+          </article>
+          <article class="work-card">
+            <h3>Electrical, HVAC &amp; fire services</h3>
+            <p>
+              Installation and periodic checks of cable trays, ducts and
+              fire safety systems at height.
+            </p>
+          </article>
+          <article class="work-card">
+            <h3>Cleaning &amp; façade upkeep</h3>
+            <p>
+              Glass cleaning, façade washing and external maintenance of
+              structures and high-rise surfaces.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a href="#"
+             class="btn-primary js-open-enquiry">
+            Click here to match a lift to the work you are planning
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery reveal">
+      <div class="container gallery-inner">
+        <div class="section-header">
+          <div class="tagline" style="color: var(--wine);">Gallery</div>
+          <h2>Example scenarios where lifts make work easier</h2>
+          <p>
+            Replace these placeholders with your own photographs to show how your
+            machines are typically used. For now they act as visual cues for the
+            kind of work our equipment supports.
+          </p>
+        </div>
+
+        <div class="gallery-track-wrapper">
+          <div class="gallery-track">
+            <article class="gallery-item">
+              <div class="gallery-image-wrap">
+                <img src="./images/b4.png"
+                     alt="Boom lift used for façade related work">
+              </div>
+              <div class="gallery-body">
+                <p>Boom lift supporting access to a multi-level façade for finishing work.</p>
+              </div>
+            </article>
+
+            <article class="gallery-item">
+              <div class="gallery-image-wrap">
+                <img src="./images/s3.png"
+                     alt="Scissor lift inside a large warehouse">
+              </div>
+              <div class="gallery-body">
+                <p>Scissor lift providing safe access inside a warehouse for lighting and services.</p>
+              </div>
+            </article>
+
+            <article class="gallery-item">
+              <div class="gallery-image-wrap">
+                <img src="./images/b5.jpg"
+                     alt="Compact lift operating between equipment">
+              </div>
+              <div class="gallery-body">
+                <p>Compact man lift positioned between equipment where larger machines cannot reach.</p>
+              </div>
+            </article>
+
+            <article class="gallery-item">
+              <div class="gallery-image-wrap">
+                <img src="./images/b6.png"
+                     alt="Boom lift used for outdoor signage work">
+              </div>
+              <div class="gallery-body">
+                <p>Boom lift assisting outdoor signage installation near a main road.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <p class="gallery-note">
+          *You can update the image file names and alt text once you add real
+          photos from your projects.
+        </p>
+
+        <div class="section-cta">
+          <a href="#"
+             class="btn-primary js-open-enquiry">
+            Click here to ask about lifts for a similar situation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY SECTION WITH VISIBLE FORM -->
+    <section class="enquiry-wrapper reveal" id="enquiry-section">
+      <div class="container enquiry-inner">
+        <div class="enquiry-top">
+          <div class="tagline" style="color: var(--wine);">Enquiry</div>
+          <h2>Share your access requirement near you</h2>
+          <p>
+            Use the form below to tell us where you are working, the approximate
+            height you need to reach and the nature of your work. We will come
+            back with suitable options and a clear rental proposal.
+          </p>
+        </div>
+
+        <!-- FORM FRAGMENT (visible at bottom) -->
+        <div id="home-enquiry-form"></div>
+
+        <!-- <div class="section-cta" style="text-align:center; margin-top: 24px;">
+          <a href="#"
+             class="btn-primary js-open-enquiry">
+            Click here to open the enquiry form in a popup
+          </a>
+        </div> -->
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER FRAGMENT -->
+  <div id="footer"></div>
+
+  <!-- POPUP ENQUIRY MODAL (FORM FRAGMENT) -->
+  <div class="enquiry-modal" id="enquiry-modal">
+    <div class="enquiry-modal-inner">
+      <button class="enquiry-modal-close js-close-enquiry" aria-label="Close enquiry form">✖</button>
+      <div id="popup-enquiry-form"></div>
+    </div>
+  </div>
+
+  <script>
+    // Fragment loader (navbar, footer, form)
+    function loadFragment(targetId, url) {
+      var container = document.getElementById(targetId);
+      if (!container) return;
+
+      fetch(url)
+        .then(function (response) {
+          return response.text();
+        })
+        .then(function (html) {
+          container.innerHTML = html;
+        })
+        .catch(function (error) {
+          console.error("Error loading fragment:", url, error);
+        });
+    }
+
+    // Load fragments
+    loadFragment("navbar", "navbar.html");
+    loadFragment("footer", "footer.html");
+    loadFragment("home-enquiry-form", "form.html");
+    loadFragment("popup-enquiry-form", "form.html");
+
+    // toggleMenu used inside navbar.html
+    function toggleMenu() {
+      var nav = document.getElementById("navLinks");
+      if (!nav) return;
+      nav.classList.toggle("open");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // REVEAL ON SCROLL
+      var revealEls = Array.prototype.slice.call(
+        document.querySelectorAll(".reveal")
+      );
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        revealEls.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        revealEls.forEach(function (el) {
+          el.classList.add("reveal-visible");
+        });
+      }
+
+      // POPUP ENQUIRY LOGIC
+      var modal = document.getElementById("enquiry-modal");
+
+      function openEnquiryModal(e) {
+        if (e) e.preventDefault();
+        if (modal) {
+          modal.classList.add("open");
+        }
+      }
+
+      function closeEnquiryModal() {
+        if (modal) {
+          modal.classList.remove("open");
+        }
+      }
+
+      function bindEnquiryButtons() {
+        var ctaButtons = document.querySelectorAll(".js-open-enquiry");
+        ctaButtons.forEach(function (btn) {
+          btn.addEventListener("click", openEnquiryModal);
+        });
+      }
+
+      bindEnquiryButtons();
+
+      var closeButtons = document.querySelectorAll(".js-close-enquiry");
+      closeButtons.forEach(function (btn) {
+        btn.addEventListener("click", closeEnquiryModal);
+      });
+
+      if (modal) {
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            closeEnquiryModal();
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

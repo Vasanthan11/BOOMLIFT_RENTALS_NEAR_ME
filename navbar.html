@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar</title>
+
+  <!-- GOTHAM FONT -->
+  <style>
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Regular.woff2") format("woff2"),
+           url("fonts/Gotham-Regular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Medium.woff2") format("woff2"),
+           url("fonts/Gotham-Medium.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Bold.woff2") format("woff2"),
+           url("fonts/Gotham-Bold.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+
+<style>
+  :root {
+    --dark-red: #44000D;
+    --wine: #83142C;
+    --gold: #F9D276;
+    --peach: #FFD39A;
+    --black: #000000;
+    --white: #FFFFFF;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Gotham", sans-serif;
+  }
+
+  body {
+    padding-top: 75px;
+  }
+
+  .navbar {
+    width: 100%;
+    background: var(--dark-red);
+    padding: 14px 22px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* LOGO */
+  .logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    color: var(--gold);
+  }
+
+  /* CALL BUTTON */
+  .call-btn {
+    background: var(--gold);
+    color: var(--black) !important;
+    padding: 8px 20px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+  }
+
+  .call-btn:hover {
+    background: var(--peach);
+    color: var(--black) !important;
+  }
+
+  .hamburger {
+    font-size: 30px;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+  }
+
+  .close-btn {
+    display: none;
+    color: var(--white);
+    font-size: 26px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  /* ============ MOBILE ============ */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 75%;
+      height: 100vh;
+      background: var(--wine);
+      flex-direction: column;
+      padding-top: 90px;
+      gap: 24px;
+      transition: right 0.4s ease;
+    }
+
+    .nav-links li a {
+      font-size: 16px;
+    }
+
+    .nav-links.open {
+      right: 0;
+    }
+
+    .nav-links.open .close-btn {
+      display: block;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+
+    <!-- LOGO IMAGE -->
+    <a href="index.html" class="logo">
+      <img src="./images/Blogo.png" alt="Boom Lift Rentals">
+    </a>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links" id="navLinks">
+      <li class="close-btn" onclick="toggleMenu()">✖</li>
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="boom-lift-rentals.html">Boom Lift Rentals</a></li>
+      <li><a href="scissor-lift-rentals.html">Scissor Lift Rentals</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="tel:+919999999999" class="call-btn">Call Now</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("open");
+  }
+</script>
+
+</body>
+</html>

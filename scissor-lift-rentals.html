@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scissor Lift Rentals Near Me – Indoor & Outdoor Platforms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Rent electric and rough-terrain scissor lifts near your location. Safe, stable platforms for warehouses, factories, malls and construction work."
+  />
+
+  <!-- GOTHAM FONT -->
+  <style>
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Regular.woff2") format("woff2"),
+           url("fonts/Gotham-Regular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Medium.woff2") format("woff2"),
+           url("fonts/Gotham-Medium.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Bold.woff2") format("woff2"),
+           url("fonts/Gotham-Bold.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    :root {
+      --dark-red: #44000D;
+      --wine: #83142C;
+      --gold: #F9D276;
+      --peach: #FFD39A;
+      --black: #000000;
+      --white: #FFFFFF;
+      --light-bg: #F8F4F3;
+
+      --sandal-light: #FCE7C8;
+      --sandal-strong: #FFE6B0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Gotham", sans-serif;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: var(--black);
+    }
+
+    main {
+      padding-top: 80px; /* space for fixed navbar */
+    }
+
+    section {
+      padding: 70px 20px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .tagline {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 8px;
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+      max-width: 640px;
+    }
+
+    .section-header h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .section-header p {
+      color: #555555;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 3px;
+      background: var(--gold);
+      color: var(--black);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      /* only colour change on hover */
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--peach);
+      color: var(--black);
+    }
+
+    .section-cta {
+      margin-top: 20px;
+    }
+
+    /* ========== HERO (RED BACKGROUND, NEW LAYOUT) ========== */
+    .hero-scissor {
+      background: radial-gradient(circle at top left, var(--dark-red), var(--wine));
+      color: var(--white);
+    }
+
+    .hero-scissor .tagline {
+      color: var(--sandal-strong);
+    }
+
+    .hero-scissor-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-scissor-main {
+      max-width: 580px;
+    }
+
+    .hero-title {
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .hero-text {
+      font-size: 14px;
+      margin-bottom: 14px;
+      color: var(--sandal-light);
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--sandal-strong);
+      max-width: 520px;
+    }
+
+    .hero-strip {
+      margin-top: 16px;
+      padding: 10px 12px;
+      border-radius: 4px;
+      background: rgba(255, 211, 154, 0.08);
+      border: 1px solid rgba(249, 210, 118, 0.4);
+      font-size: 12px;
+      color: var(--sandal-strong);
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .hero-pill {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 211, 154, 0.7);
+      color: var(--sandal-strong);
+    }
+
+    .hero-cta {
+      margin-top: 18px;
+    }
+
+    .hero-side-card {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid rgba(255, 211, 154, 0.4);
+    }
+
+    .hero-image-wrap {
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      background: #333;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-side-title {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: var(--sandal-strong);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-side-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--sandal-light);
+      padding-left: 0;
+    }
+
+    .hero-side-list li {
+      margin-bottom: 4px;
+    }
+
+    .hero-side-list li::before {
+      content: "• ";
+      color: var(--gold);
+    }
+
+    /* ========== RANGE / HEIGHT OPTIONS ========== */
+    .range {
+      background: var(--white);
+    }
+
+    .range-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .range-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .range-card {
+      background: #F7F2F1;
+      border-radius: 8px;
+      padding: 14px;
+      border: 1px solid #E3D7D3;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .range-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      color: var(--wine);
+      margin-bottom: 4px;
+    }
+
+    .range-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark-red);
+    }
+
+    .range-text {
+      font-size: 13px;
+      color: #555555;
+      margin-bottom: 8px;
+    }
+
+    .range-meta {
+      font-size: 12px;
+      color: #777777;
+      margin-bottom: 8px;
+    }
+
+    .range-card .btn-primary {
+      align-self: flex-start;
+      font-size: 12px;
+      padding: 9px 14px;
+      margin-top: auto;
+    }
+
+    /* ========== INDOOR / OUTDOOR SPLIT ========== */
+    .env {
+      background: #FFF7E8;
+    }
+
+    .env-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 26px;
+      align-items: center;
+    }
+
+    .env-block {
+      background: #F7EEEC;
+      border-radius: 8px;
+      padding: 14px;
+      border: 1px solid #E3D7D3;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .env-image {
+      border-radius: 6px;
+      overflow: hidden;
+      background: #DDD;
+    }
+
+    .env-image img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .env-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--wine);
+    }
+
+    .env-block h3 {
+      font-size: 16px;
+      color: var(--dark-red);
+    }
+
+    .env-block p {
+      font-size: 13px;
+      color: #555555;
+    }
+
+    .env-list {
+      list-style: none;
+      font-size: 12px;
+      color: #555555;
+    }
+
+    .env-list li {
+      margin-bottom: 4px;
+    }
+
+    .env-list li::before {
+      content: "• ";
+      color: var(--dark-red);
+    }
+
+    /* ========== USE CASES SECTION ========== */
+    .use {
+      background: var(--white);
+    }
+
+    .use-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .use-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .use-card {
+      background: #F7F2F1;
+      border-radius: 8px;
+      padding: 14px;
+      border: 1px solid #E1D3D0;
+    }
+
+    .use-card h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: var(--dark-red);
+    }
+
+    .use-card p {
+      font-size: 13px;
+      color: #555555;
+    }
+
+    /* ========== ENQUIRY / VISIBLE FORM ========== */
+    .enquiry-wrapper {
+      background: var(--white);
+    }
+
+    .enquiry-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .enquiry-top {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .enquiry-top h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .enquiry-top p {
+      font-size: 14px;
+      color: #555555;
+    }
+
+    /* ========== POPUP ENQUIRY MODAL ========== */
+    .enquiry-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    .enquiry-modal.open {
+      display: flex;
+    }
+
+    .enquiry-modal-inner {
+      position: relative;
+      width: 100%;
+      max-width: 720px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 8px;
+      background: var(--light-bg);
+    }
+
+    .enquiry-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 22px;
+      background: transparent;
+      border: none;
+      color: var(--black);
+      cursor: pointer;
+    }
+
+    /* ========== SIMPLE REVEAL ANIMATION ========== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px) {
+      section {
+        padding: 60px 16px;
+      }
+
+      .hero-scissor-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .range-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .env-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .use-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .range-grid,
+      .use-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR FRAGMENT -->
+  <div id="navbar"></div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-scissor reveal">
+      <div class="container hero-scissor-inner">
+        <div class="hero-scissor-main">
+          <div class="tagline">Scissor lift rentals · near your location</div>
+          <h1 class="hero-title">
+            Scissor lift rentals that keep
+            <br>
+            your team steady at working height
+          </h1>
+          <p class="hero-text">
+            Rent electric and rough-terrain scissor lifts near your site instead of
+            managing temporary platforms. Give your team a flat, guarded platform
+            to work from – indoors or outdoors.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#"
+               class="btn-primary js-open-enquiry">
+              Click here to plan your scissor lift rental near you
+            </a>
+          </div><br><br>
+
+          <p class="hero-note">
+            Tell us your working height, the type of work and where your site is located.
+            We will suggest suitable scissor lifts and check nearby availability.
+          </p>
+
+          <div class="hero-strip">
+            Short tasks and longer projects · Indoor and outdoor options ·
+            Support from booking to pickup
+          </div>
+
+          <div class="hero-pills">
+            <span class="hero-pill">Electric scissor lifts</span>
+            <span class="hero-pill">Rough-terrain platforms</span>
+            <span class="hero-pill">Narrow aisle models</span>
+          </div>
+        </div>
+
+        <aside class="hero-side-card">
+          <div class="hero-image-wrap">
+            <!-- HERO IMAGE PLACEHOLDER -->
+            <img src="./images/s4.png"
+                 alt="Scissor lift working at height inside an industrial building">
+          </div>
+          <div class="hero-side-title">
+            Details that help us select the right scissor lift
+          </div>
+          <ul class="hero-side-list">
+            <li>Maximum height you need to reach and space needed on the platform.</li>
+            <li>Whether the work is fully indoors, semi-covered or open outdoors.</li>
+            <li>Width of entries, aisles and turning space at your site.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- RANGE / HEIGHT OPTIONS -->
+    <section class="range reveal">
+      <div class="container range-inner">
+        <div class="section-header">
+          <div class="tagline" style="color: var(--wine);">Scissor lift range</div>
+          <h2>Scissor lift heights that cover typical jobs near you</h2>
+          <p>
+            From low-level access to higher warehouse and construction jobs, there are different
+            scissor lift sizes to match your working height and floor conditions.
+          </p>
+        </div>
+
+        <div class="range-grid">
+          <article class="range-card">
+            <div>
+              <div class="range-label">Low-level indoor</div>
+              <div class="range-title">Up to around 16 ft</div>
+              <p class="range-text">
+                For quick work where ladders are not safe – changing fixtures, signage,
+                or small maintenance tasks.
+              </p>
+              <p class="range-meta">
+                Often used in corridors, plant rooms and compact service areas.
+              </p>
+            </div>
+            <a href="#"
+               class="btn-primary js-open-enquiry">
+              Click here to discuss low-level access near you
+            </a>
+          </article>
+
+          <article class="range-card">
+            <div>
+              <div class="range-label">Standard warehouse</div>
+              <div class="range-title">Around 19–26 ft</div>
+              <p class="range-text">
+                Suits racking installation, lighting work and services routed above shop
+                floors and aisles.
+              </p>
+              <p class="range-meta">
+                Common in warehouses, logistics hubs and large retail back-end spaces.
+              </p>
+            </div>
+            <a href="#"
+               class="btn-primary js-open-enquiry">
+              Click here to choose a warehouse scissor lift height
+            </a>
+          </article>
+
+          <article class="range-card">
+            <div>
+              <div class="range-label">High-reach indoor</div>
+              <div class="range-title">Up to around 32 ft</div>
+              <p class="range-text">
+                For higher ceilings in atriums, production areas and large commercial
+                interiors where you still need a flat platform.
+              </p>
+              <p class="range-meta">
+                Used in malls, convention areas and tall factory bays.
+              </p>
+            </div>
+            <a href="#"
+               class="btn-primary js-open-enquiry">
+              Click here to check high-reach scissor lift options
+            </a>
+          </article>
+
+          <article class="range-card">
+            <div>
+              <div class="range-label">Rough-terrain</div>
+              <div class="range-title">Outdoor slabs & yards</div>
+              <p class="range-text">
+                Built for outdoor slabs and unfinished surfaces where you still need
+                a stable work platform.
+              </p>
+              <p class="range-meta">
+                Suitable for construction sites, open yards and external service routes.
+              </p>
+            </div>
+            <a href="#"
+               class="btn-primary js-open-enquiry">
+              Click here to book an outdoor scissor lift near your site
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDOOR / OUTDOOR SPLIT SECTION -->
+    <section class="env reveal">
+      <div class="container env-inner">
+        <div class="env-block">
+          <div class="env-image">
+            <!-- INDOOR IMAGE PLACEHOLDER -->
+            <img src="./images/s14.png"
+                 alt="Electric scissor lift working inside a warehouse">
+          </div>
+          <div class="env-label">Indoor use</div>
+          <h3>Electric scissor lifts for finished interiors</h3>
+          <p>
+            Electric scissor lifts are quieter and emission-free at the point of use,
+            making them suitable for finished interiors, operating warehouses and
+            active production areas.
+          </p>
+          <ul class="env-list">
+            <li>Used in warehouses, showrooms, malls and production blocks.</li>
+            <li>Designed for level, finished floors with planned movement paths.</li>
+            <li>Preferred where noise and fumes are restricted.</li>
+          </ul>
+          <div class="section-cta">
+            <a href="#"
+               class="btn-primary js-open-enquiry">
+              Click here to plan an indoor scissor lift for your facility
+            </a>
+          </div>
+        </div>
+
+        <div class="env-block">
+          <div class="env-image">
+            <!-- OUTDOOR IMAGE PLACEHOLDER -->
+            <img src="./images/s6.png"
+                 alt="Rough-terrain scissor lift working on an outdoor project">
+          </div>
+          <div class="env-label">Outdoor & semi-outdoor</div>
+          <h3>Rough-terrain scissor lifts for tougher surfaces</h3>
+          <p>
+            Where floors are still under preparation, or where you are working in
+            open yards and construction areas, rough-terrain platforms provide more
+            capability to handle uneven slabs.
+          </p>
+          <ul class="env-list">
+            <li>Used for construction, external service runs and yard work.</li>
+            <li>Allows movement across more demanding slab conditions.</li>
+            <li>Helps keep teams safer compared to improvised access methods.</li>
+          </ul>
+          <div class="section-cta">
+            <a href="#"
+               class="btn-primary js-open-enquiry">
+              Click here to check rough-terrain options near your location
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES SECTION -->
+    <section class="use reveal">
+      <div class="container use-inner">
+        <div class="section-header">
+          <div class="tagline" style="color: var(--wine);">Where scissor lifts help</div>
+          <h2>Typical work that regularly uses scissor lifts near you</h2>
+          <p>
+            These are some of the common activities where scissor lifts are chosen
+            over ladders and makeshift platforms, because a steady work surface
+            and repeat access at height are needed.
+          </p>
+        </div>
+
+        <div class="use-grid">
+          <article class="use-card">
+            <h3>Warehouse racking and services</h3>
+            <p>
+              Installation and modification of racking, lighting, sprinklers and
+              other services above aisles and storage zones.
+            </p>
+          </article>
+          <article class="use-card">
+            <h3>Factory and process areas</h3>
+            <p>
+              Access to pipe routes, cable trays and equipment placed above
+              normal working levels inside plant areas.
+            </p>
+          </article>
+          <article class="use-card">
+            <h3>Retail and commercial interiors</h3>
+            <p>
+              Signage, ceiling work and services for showrooms, offices and
+              commercial fit-outs.
+            </p>
+          </article>
+          <article class="use-card">
+            <h3>Malls and public spaces</h3>
+            <p>
+              Atrium lighting, décor and maintenance tasks where public-facing
+              spaces need safe access solutions.
+            </p>
+          </article>
+          <article class="use-card">
+            <h3>Data centres and tech facilities</h3>
+            <p>
+              Working on routes for cables, cooling and fire safety inside
+              controlled environments.
+            </p>
+          </article>
+          <article class="use-card">
+            <h3>Cleaning and inspections</h3>
+            <p>
+              Periodic cleaning, inspections and minor repairs at height where
+              teams need stable footing along the way.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a href="#"
+             class="btn-primary js-open-enquiry">
+            Click here to match a scissor lift to the work you are planning
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY SECTION WITH VISIBLE FORM -->
+    <section class="enquiry-wrapper reveal" id="enquiry-section">
+      <div class="container enquiry-inner">
+        <div class="enquiry-top">
+          <div class="tagline" style="color: var(--wine);">Enquiry</div>
+          <h2>Share your scissor lift requirement near you</h2>
+          <p>
+            Use the form below to tell us where you are working, the height you need
+            to reach and how long you expect to use the scissor lift. We will respond
+            with suitable options and a clear rental quote.
+          </p>
+        </div>
+
+        <!-- INLINE FORM FRAGMENT -->
+        <div id="page-enquiry-form"></div>
+
+        <!-- <div class="section-cta" style="text-align:center; margin-top: 24px;">
+          <a href="#"
+             class="btn-primary js-open-enquiry">
+            Click here to open the scissor lift enquiry form in a popup
+          </a>
+        </div> -->
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER FRAGMENT -->
+  <div id="footer"></div>
+
+  <!-- POPUP ENQUIRY MODAL (FORM FRAGMENT) -->
+  <div class="enquiry-modal" id="enquiry-modal">
+    <div class="enquiry-modal-inner">
+      <button class="enquiry-modal-close js-close-enquiry" aria-label="Close enquiry form">✖</button>
+      <div id="popup-enquiry-form"></div>
+    </div>
+  </div>
+
+  <script>
+    // Fragment loader (navbar, footer, form)
+    function loadFragment(targetId, url) {
+      var container = document.getElementById(targetId);
+      if (!container) return;
+
+      fetch(url)
+        .then(function (response) {
+          return response.text();
+        })
+        .then(function (html) {
+          container.innerHTML = html;
+        })
+        .catch(function (error) {
+          console.error("Error loading fragment:", url, error);
+        });
+    }
+
+    // Load fragments
+    loadFragment("navbar", "navbar.html");
+    loadFragment("footer", "footer.html");
+    loadFragment("page-enquiry-form", "form.html");
+    loadFragment("popup-enquiry-form", "form.html");
+
+    // toggleMenu used inside navbar.html
+    function toggleMenu() {
+      var nav = document.getElementById("navLinks");
+      if (!nav) return;
+      nav.classList.toggle("open");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // REVEAL ON SCROLL
+      var revealEls = Array.prototype.slice.call(
+        document.querySelectorAll(".reveal")
+      );
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        revealEls.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        revealEls.forEach(function (el) {
+          el.classList.add("reveal-visible");
+        });
+      }
+
+      // POPUP ENQUIRY LOGIC
+      var modal = document.getElementById("enquiry-modal");
+
+      function openEnquiryModal(e) {
+        if (e) e.preventDefault();
+        if (modal) {
+          modal.classList.add("open");
+        }
+      }
+
+      function closeEnquiryModal() {
+        if (modal) {
+          modal.classList.remove("open");
+        }
+      }
+
+      function bindEnquiryButtons() {
+        var ctaButtons = document.querySelectorAll(".js-open-enquiry");
+        ctaButtons.forEach(function (btn) {
+          btn.addEventListener("click", openEnquiryModal);
+        });
+      }
+
+      bindEnquiryButtons();
+
+      var closeButtons = document.querySelectorAll(".js-close-enquiry");
+      closeButtons.forEach(function (btn) {
+        btn.addEventListener("click", closeEnquiryModal);
+      });
+
+      if (modal) {
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            closeEnquiryModal();
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

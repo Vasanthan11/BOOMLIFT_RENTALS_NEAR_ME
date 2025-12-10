@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+
+  <!-- GOTHAM FONT (Reuse same font setup) -->
+  <style>
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Regular.woff2") format("woff2"),
+           url("fonts/Gotham-Regular.woff") format("woff");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Medium.woff2") format("woff2"),
+           url("fonts/Gotham-Medium.woff") format("woff");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Bold.woff2") format("woff2"),
+           url("fonts/Gotham-Bold.woff") format("woff");
+      font-weight: 700;
+    }
+
+    :root {
+      --dark-red: #44000D;
+      --wine: #83142C;
+      --gold: #F9D276;
+      --peach: #FFD39A;
+      --black: #000000;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Gotham", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--dark-red), var(--wine));
+      color: var(--white);
+      padding: 40px 16px;
+    }
+
+    .thankyou-box {
+      background: var(--white);
+      color: var(--black);
+      border-radius: 10px;
+      max-width: 460px;
+      width: 100%;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    }
+
+    .thankyou-box h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: var(--dark-red);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .thankyou-box p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .thankyou-box a {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--gold);
+      color: var(--black);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: background 0.25s ease;
+    }
+
+    .thankyou-box a:hover {
+      background: var(--peach);
+    }
+
+    @media(max-width:600px){
+      .thankyou-box {
+        padding: 28px 20px;
+      }
+      .thankyou-box h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="thankyou-box">
+    <h1>Thank You!</h1>
+    <p>
+      Your rental enquiry has been submitted successfully.  
+      Our team will contact you shortly with the best available quote.
+    </p>
+    <a href="index.html">Back to Home</a>
+  </div>
+
+</body>
+</html>

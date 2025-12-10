@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Enquiry Form</title>
+
+  <!-- GOTHAM FONT -->
+  <style>
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Regular.woff2") format("woff2"),
+           url("fonts/Gotham-Regular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Medium.woff2") format("woff2"),
+           url("fonts/Gotham-Medium.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Bold.woff2") format("woff2"),
+           url("fonts/Gotham-Bold.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    :root {
+      --dark-red: #44000D;
+      --wine: #83142C;
+      --gold: #F9D276;
+      --peach: #FFD39A;
+      --black: #000000;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Gotham", sans-serif;
+    }
+
+    .enquiry-section {
+      width: 100%;
+      padding: 70px 50px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, var(--dark-red), var(--wine));
+      color: var(--white);
+    }
+
+    .enquiry-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      align-items: stretch;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    /* LEFT SIDE CONTENT */
+    .enquiry-left {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .enquiry-left h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .enquiry-left p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      color: #f3e6e6;
+    }
+
+    .enquiry-tagline {
+      margin-top: 12px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .enquiry-bullets {
+      margin-top: 8px;
+      margin-bottom: 18px;
+      font-size: 13px;
+    }
+
+    .enquiry-bullets li {
+      margin-bottom: 6px;
+      list-style: none;
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .enquiry-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--peach);
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .contact-details {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .contact-details p {
+      margin-bottom: 6px;
+    }
+
+    .contact-details strong {
+      color: var(--peach);
+      font-weight: 600;
+    }
+
+    .contact-details a {
+      color: var(--peach);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    /* RIGHT SIDE FORM CARD */
+    .enquiry-right {
+      flex: 1;
+      min-width: 280px;
+      background: var(--white);
+      border-radius: 8px;
+      padding: 24px 22px 22px;
+      color: var(--black);
+    }
+
+    .enquiry-right-header {
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--peach);
+      padding-bottom: 8px;
+    }
+
+    .enquiry-right-header h3 {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--dark-red);
+    }
+
+    .enquiry-right-header p {
+      font-size: 12px;
+      color: #666666;
+      margin-top: 4px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .form-grid-full {
+      grid-column: 1 / 3;
+    }
+
+    .enquiry-right input,
+    .enquiry-right select,
+    .enquiry-right textarea {
+      width: 100%;
+      padding: 10px 11px;
+      font-size: 13px;
+      border-radius: 4px;
+      border: 1px solid #d4d4d4;
+      outline: none;
+      color: var(--dark-red);
+      background: #fdfdfd;
+    }
+
+    .enquiry-right textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .enquiry-right input::placeholder,
+    .enquiry-right textarea::placeholder {
+      color: #b47b7b;
+      font-size: 12px;
+    }
+
+    .enquiry-right select {
+      color: #555555;
+    }
+
+    .enquiry-right select option {
+      color: #333333;
+    }
+
+    .submit-row {
+      margin-top: 16px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      background: var(--gold);
+      color: var(--black);
+      transition: background 0.25s ease;
+    }
+
+    /* only colour change on hover */
+    .submit-btn:hover {
+      background: var(--peach);
+      color: var(--black);
+    }
+
+    .form-note {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #777777;
+      text-align: center;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .enquiry-container {
+        flex-direction: column;
+      }
+
+      .enquiry-right {
+        margin-top: 20px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid-full {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .enquiry-section {
+        padding: 55px 16px;
+      }
+
+      .enquiry-left h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="enquiry-section">
+  <div class="enquiry-container">
+
+    <!-- LEFT SIDE CONTENT -->
+    <div class="enquiry-left">
+      <h2>Send Your Rental Enquiry</h2>
+      <p>
+        Looking for boom lifts or scissor lifts near your location? Share
+        your job details and we’ll help you choose the right height and
+        model for safe access.
+      </p>
+
+      <p class="enquiry-tagline">
+        Fast quotes • Pan-city service • Operator support available
+      </p>
+
+      <ul class="enquiry-bullets">
+        <li>Daily, weekly and monthly rental options</li>
+        <li>Suitable for maintenance, construction and façade work</li>
+        <li>Support team to assist from booking to completion</li>
+      </ul>
+
+      <div class="contact-details">
+        <p><strong>Call:</strong> <a href="tel:+917200046850">+91 72000 46850</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@boomliftrentalanearme.com">info@boomliftrentalanearme.com</a></p>
+        <p><strong>Working Hours:</strong> Mon – Sat, 9:00 AM to 7:00 PM</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="enquiry-right">
+      <div class="enquiry-right-header">
+        <h3>Enquiry Form for Access Equipment</h3>
+        <p>Share basic details and our team will get back with a tailored quote.</p>
+      </div>
+
+      <form action="contact.php" method="POST">
+        <div class="form-grid">
+          <div>
+            <input type="text" name="full_name" placeholder="Full Name*" required>
+          </div>
+          <div>
+            <input type="tel" name="contact" placeholder="Contact Number*" required>
+          </div>
+          <div>
+            <input type="email" name="email" placeholder="Email Address*" required>
+          </div>
+          <div>
+            <input type="text" name="area" placeholder="City / Area*" required>
+          </div>
+
+          <div class="form-grid-full">
+            <select name="equipment_type" required>
+              <option value="" disabled selected>-- Select Equipment --</option>
+              <option value="Scissor Lift">Scissor Lift</option>
+              <option value="Boom Lift">Boom Lift</option>
+              <option value="Manlift / AWP">Manlift / Aerial Work Platform</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+
+          <div class="form-grid-full">
+            <textarea name="requirement" placeholder="Briefly describe your work height, duration and site details*"
+                      required></textarea>
+          </div>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="submit-btn">Request Rental Quote</button>
+          <p class="form-note">By submitting, you agree to be contacted regarding your enquiry.</p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

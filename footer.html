@@ -1,0 +1,83 @@
+<!-- FOOTER FILE – footer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Footer</title>
+
+  <!-- GOTHAM FONT -->
+  <style>
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Regular.woff2") format("woff2"),
+           url("fonts/Gotham-Regular.woff") format("woff");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Medium.woff2") format("woff2"),
+           url("fonts/Gotham-Medium.woff") format("woff");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Gotham";
+      src: url("fonts/Gotham-Bold.woff2") format("woff2"),
+           url("fonts/Gotham-Bold.woff") format("woff");
+      font-weight: 700;
+    }
+  </style>
+
+  <style>
+    :root {
+      --dark-red: #44000D;
+      --wine: #83142C;
+      --gold: #F9D276;
+      --peach: #FFD39A;
+      --black: #000000;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Gotham", sans-serif;
+    }
+
+    .footer {
+      width: 100%;
+      background: var(--dark-red);
+      color: var(--white);
+      text-align: center;
+      padding: 22px 15px;
+      font-size: 13px;
+      letter-spacing: 0.6px;
+      border-top: 1px solid var(--wine);
+    }
+
+    .footer span {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .footer {
+        font-size: 12px;
+        padding: 20px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <footer class="footer">
+    <p>
+      © 2025 <span>Boom Lift Rentals Near Me</span>. All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
