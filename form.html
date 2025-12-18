@@ -273,6 +273,28 @@
         font-size: 24px;
       }
     }
+
+    /* ===== LOCATION CHIP MODEL ===== */
+.location-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.location-chip {
+  background: rgba(255, 211, 154, 0.18);
+  color: var(--peach);
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 211, 154, 0.45);
+  white-space: nowrap;
+}
+
   </style>
 </head>
 
@@ -303,14 +325,18 @@
       <div class="contact-details">
         <p><strong>Call:</strong> <a href="tel:+917200046850">+91 72000 46850</a></p>
         <p><strong>Email:</strong> <a href="mailto:info@boomliftrentalanearme.com">info@boomliftrentalanearme.com</a></p>
-        <p><strong>Our Location:</strong> Chennai,
-Coimbatore,
-Kochi,
-Bengaluru,
-Hyderabad,
-Pune,
-Mumbai,
-Delhi</p>
+       <p> <p><strong>Our Location:</strong></p>
+<div class="location-chips">
+  <span class="location-chip">Chennai</span>
+  <span class="location-chip">Coimbatore</span>
+  <span class="location-chip">Kochi</span>
+  <span class="location-chip">Bengaluru</span>
+  <span class="location-chip">Hyderabad</span>
+  <span class="location-chip">Pune</span>
+  <span class="location-chip">Mumbai</span>
+  <span class="location-chip">Delhi</span>
+</div>
+</p>
         <p><strong>Working Hours:</strong> Mon – Sat, 9:00 AM to 7:00 PM</p>
       </div>
     </div>

@@ -214,19 +214,34 @@
       border: 1px solid rgba(255, 211, 154, 0.4);
     }
 
-    .hero-image-wrap {
-      border-radius: 6px;
-      overflow: hidden;
-      margin-bottom: 10px;
-      background: #333;
-    }
+    /* ===== HERO IMAGE FIX – SCISSOR PAGE (IMPORTANT) ===== */
+.hero-image-wrap {
+  width: 100%;
+  height: 360px;           /* KEY FIX */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #222;
+  margin-bottom: 14px;
+}
 
-    .hero-image-wrap img {
-      width: 100%;
-      max-height: 220px;
-      object-fit: cover;
-      display: block;
-    }
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;            /* KEY FIX */
+  object-fit: cover;       /* professional crop */
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hero-image-wrap {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-image-wrap {
+    height: 240px;
+  }
+}
 
     .hero-side-title {
       font-size: 13px;
@@ -537,7 +552,7 @@
     <section class="hero-scissor reveal">
       <div class="container hero-scissor-inner">
         <div class="hero-scissor-main">
-          <div class="tagline">Scissor lift rentals · near your location</div>
+          <div class="tagline">Scissor lift hire · near your location</div>
           <h1 class="hero-title">
             Scissor lift rentals that keep
             <br>
@@ -567,7 +582,7 @@
           </div>
 
           <div class="hero-pills">
-            <span class="hero-pill">Electric scissor lifts</span>
+            <span class="hero-pill">Scissor lifts</span>
             <span class="hero-pill">Rough-terrain platforms</span>
             <span class="hero-pill">Narrow aisle models</span>
           </div>
@@ -576,7 +591,7 @@
         <aside class="hero-side-card">
           <div class="hero-image-wrap">
             <!-- HERO IMAGE PLACEHOLDER -->
-            <img src="./images/s4.png"
+            <img src="./images/SL12.png"
                  alt="Scissor lift working at height inside an industrial building">
           </div>
           <div class="hero-side-title">
@@ -685,13 +700,13 @@
         <div class="env-block">
           <div class="env-image">
             <!-- INDOOR IMAGE PLACEHOLDER -->
-            <img src="./images/s14.png"
+            <img src="./images/GSL-02.png"
                  alt="Electric scissor lift working inside a warehouse">
           </div>
           <div class="env-label">Indoor use</div>
-          <h3>Electric scissor lifts for finished interiors</h3>
+          <h3>Scissor lifts for finished interiors</h3>
           <p>
-            Electric scissor lifts are quieter and emission-free at the point of use,
+            Scissor lifts are quieter and emission-free at the point of use,
             making them suitable for finished interiors, operating warehouses and
             active production areas.
           </p>
@@ -711,7 +726,7 @@
         <div class="env-block">
           <div class="env-image">
             <!-- OUTDOOR IMAGE PLACEHOLDER -->
-            <img src="./images/s6.png"
+            <img src="./images/SL14.png"
                  alt="Rough-terrain scissor lift working on an outdoor project">
           </div>
           <div class="env-label">Outdoor & semi-outdoor</div>
@@ -808,7 +823,7 @@
       <div class="container enquiry-inner">
         <div class="enquiry-top">
           <div class="tagline" style="color: var(--wine);">Enquiry</div>
-          <h2>Share your scissor lift requirement near you</h2>
+          <h2>Share your scissor lift hire requirement near you</h2>
           <p>
             Use the form below to tell us where you are working, the height you need
             to reach and how long you expect to use the scissor lift. We will respond
